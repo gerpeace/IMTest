@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.gerpeace.imtestpanuwat.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="สุ่มตัวเลข 1000 - 9999 จาก API : " />
+
+        <TextView
+            android:textSize="20sp"
+            android:text="ตัวเลขสุ่ม"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_random"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_weight="0.3"
+            android:layout_alignParentTop="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="กรอกตัวเลขเพื่อเปรียบเทียบ : " />
+
+            <EditText
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/et_new_num"
+                android:hint="กรอกตัวเลข"
+                android:inputType="number" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="OnCompare"
+        android:textSize="20sp"
+        android:text="นำตัวเลขมาเปรียบเทียบกัน"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_compare" />
+
+    <TextView
+        android:textColor="#ff0900"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="แสดงผลลัพธ์"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_result" />
+</LinearLayout>
